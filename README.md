@@ -1,6 +1,7 @@
 Tishfy2 – Fashion Shopify Theme
 
 DEMO: https://tishfy2-demo.myshopify.com/
+
 storefront password: 1
 
 Included files:
