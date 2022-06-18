@@ -1,0 +1,432 @@
+{%- if section.settings.display_slider -%}
+<!-- Slider Section Start -->
+    <div class="slider-section section slider-active mb-3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slider Slider Start -->
+                {%- if section.settings.display_slide1 -%}
+                  <div class="single-slider swiper-slide animation-style-01">
+                      <div class="container">
+                          <div class="slider-wrapper">
+                              <div class="row">
+                                  <div class="col-sm-6 align-self-center">
+                                      <!-- Slider Content Start -->
+                                      <div class="slider-content">
+                                          <img class="shape-1" src="{{ 'shape-1.svg' | asset_url }}" alt="">
+                                          <h4 class="sub-title">{{ section.settings.slide1_subtitle }}</h4>
+                                          <h2 class="main-title">{{ section.settings.slide1_title }}</h2>
+                                          <a class="slider-btn" href="{{ section.settings.slide1_url }}<">{{ section.settings.slide1_url_text }}<span class="material-icons">arrow_right_alt</span></a>
+                                      </div>
+                                      <!-- Slider Content End -->
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <!-- Slider Image Start -->
+                                      <div class="slider-image">
+                                          {%- if section.settings.slide1_img != blank -%}
+                                                <img src="{{ section.settings.slide1_img | img_url }}" alt="">
+                                          {%- else -%}
+                                                <img src="{{ 'slider-image-01.png' | asset_url }}" alt="">
+                                          {%- endif -%}
+
+                                          <div class="slider-imgaes-shape">
+                                              <div class="shape shape-1">
+                                                  <img src="{{ 'shape-2.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-2">
+                                                  <img src="{{ 'shape-3.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-3">
+                                                  <img src="{{ 'shape-4.svg' | asset_url }}" alt="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- Slider Image End -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {%- endif -%}
+                <!-- Slider Slider Start -->
+
+                <!-- Slider Slider Start -->
+                {%- if section.settings.display_slide2 -%}
+                  <div class="single-slider swiper-slide animation-style-01">
+                      <div class="container">
+                          <div class="slider-wrapper">
+                              <div class="row">
+                                  <div class="col-sm-6 align-self-center">
+                                      <!-- Slider Content Start -->
+                                      <div class="slider-content">
+                                          <img class="shape-1" src="{{ 'shape-1.svg' | asset_url }}" alt="">
+                                          <h4 class="sub-title">{{ section.settings.slide2_subtitle }}</h4>
+                                          <h2 class="main-title">{{ section.settings.slide2_title }}</h2>
+                                          <a class="slider-btn" href="{{ section.settings.slide2_url }}<">{{ section.settings.slide2_url_text }}<span class="material-icons">arrow_right_alt</span></a>
+                                      </div>
+                                      <!-- Slider Content End -->
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <!-- Slider Image Start -->
+                                      <div class="slider-image">
+                                          {%- if section.settings.slide2_img != blank -%}
+                                                <img src="{{ section.settings.slide2_img | img_url }}" alt="">
+                                          {%- else -%}
+                                                <img src="{{ 'slider-image-02.png' | asset_url }}" alt="">
+                                          {%- endif -%}
+
+                                          <div class="slider-imgaes-shape">
+                                              <div class="shape shape-1">
+                                                  <img src="{{ 'shape-2.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-2">
+                                                  <img src="{{ 'shape-3.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-3">
+                                                  <img src="{{ 'shape-4.svg' | asset_url }}" alt="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- Slider Image End -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {%- endif -%}
+                <!-- Slider Slider Start -->
+
+                <!-- Slider Slider Start -->
+                {%- if section.settings.display_slide3 -%}
+                  <div class="single-slider swiper-slide animation-style-01">
+                      <div class="container">
+                          <div class="slider-wrapper">
+                              <div class="row">
+                                  <div class="col-sm-6 align-self-center">
+                                      <!-- Slider Content Start -->
+                                      <div class="slider-content">
+                                          <img class="shape-1" src="{{ 'shape-1.svg' | asset_url }}" alt="">
+                                          <h4 class="sub-title">{{ section.settings.slide3_subtitle }}</h4>
+                                          <h2 class="main-title">{{ section.settings.slide3_title }}</h2>
+                                          <a class="slider-btn" href="{{ section.settings.slide3_url }}<">{{ section.settings.slide3_url_text }}<span class="material-icons">arrow_right_alt</span></a>
+                                      </div>
+                                      <!-- Slider Content End -->
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <!-- Slider Image Start -->
+                                      <div class="slider-image">
+                                          {%- if section.settings.slide3_img != blank -%}
+                                                <img src="{{ section.settings.slide3_img | img_url }}" alt="">
+                                          {%- endif -%}
+
+                                          <div class="slider-imgaes-shape">
+                                              <div class="shape shape-1">
+                                                  <img src="{{ 'shape-2.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-2">
+                                                  <img src="{{ 'shape-3.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-3">
+                                                  <img src="{{ 'shape-4.svg' | asset_url }}" alt="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- Slider Image End -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {%- endif -%}
+                <!-- Slider Slider Start -->
+
+                <!-- Slider Slider Start -->
+                {%- if section.settings.display_slide4 -%}
+                  <div class="single-slider swiper-slide animation-style-01">
+                      <div class="container">
+                          <div class="slider-wrapper">
+                              <div class="row">
+                                  <div class="col-sm-6 align-self-center">
+                                      <!-- Slider Content Start -->
+                                      <div class="slider-content">
+                                          <img class="shape-1" src="{{ 'shape-1.svg' | asset_url }}" alt="">
+                                          <h4 class="sub-title">{{ section.settings.slide4_subtitle }}</h4>
+                                          <h2 class="main-title">{{ section.settings.slide4_title }}</h2>
+                                          <a class="slider-btn" href="{{ section.settings.slide4_url }}<">{{ section.settings.slide4_url_text }}<span class="material-icons">arrow_right_alt</span></a>
+                                      </div>
+                                      <!-- Slider Content End -->
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <!-- Slider Image Start -->
+                                      <div class="slider-image">
+                                          {%- if section.settings.slide4_img != blank -%}
+                                                <img src="{{ section.settings.slide4_img | img_url }}" alt="">
+                                          {%- endif -%}
+
+                                          <div class="slider-imgaes-shape">
+                                              <div class="shape shape-1">
+                                                  <img src="{{ 'shape-2.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-2">
+                                                  <img src="{{ 'shape-3.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-3">
+                                                  <img src="{{ 'shape-4.svg' | asset_url }}" alt="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- Slider Image End -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {%- endif -%}
+                <!-- Slider Slider Start -->
+
+                <!-- Slider Slider Start -->
+                {%- if section.settings.display_slide5 -%}
+                  <div class="single-slider swiper-slide animation-style-01">
+                      <div class="container">
+                          <div class="slider-wrapper">
+                              <div class="row">
+                                  <div class="col-sm-6 align-self-center">
+                                      <!-- Slider Content Start -->
+                                      <div class="slider-content">
+                                          <img class="shape-1" src="{{ 'shape-1.svg' | asset_url }}" alt="">
+                                          <h4 class="sub-title">{{ section.settings.slide5_subtitle }}</h4>
+                                          <h2 class="main-title">{{ section.settings.slide5_title }}</h2>
+                                          <a class="slider-btn" href="{{ section.settings.slide5_url }}<">{{ section.settings.slide5_url_text }}<span class="material-icons">arrow_right_alt</span></a>
+                                      </div>
+                                      <!-- Slider Content End -->
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <!-- Slider Image Start -->
+                                      <div class="slider-image">
+                                          {%- if section.settings.slide5_img != blank -%}
+                                                <img src="{{ section.settings.slide5_img | img_url }}" alt="">
+                                          {%- endif -%}
+
+                                          <div class="slider-imgaes-shape">
+                                              <div class="shape shape-1">
+                                                  <img src="{{ 'shape-2.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-2">
+                                                  <img src="{{ 'shape-3.svg' | asset_url }}" alt="">
+                                              </div>
+                                              <div class="shape shape-3">
+                                                  <img src="{{ 'shape-4.svg' | asset_url }}" alt="">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- Slider Image End -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {%- endif -%}
+                <!-- Slider Slider Start -->
+
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"><span class="material-icons">trending_flat</span></div>
+            <div class="swiper-button-prev"><span class="material-icons">trending_flat</span></div>
+        </div>
+    </div>
+    <!-- Slider Section End -->
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Homepage Slider",
+  "class": "index-section index-section--flush",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_slider",
+      "label": "Display Slider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_slide1",
+      "label": "Display Slide #1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "slide1_img",
+      "label": "Slide #1 Image"
+    },
+    {
+      "type": "text",
+      "id": "slide1_subtitle",
+      "label": "Slide #1 Subtitle",
+      "default": "Up to 50%"
+    },
+    {
+      "type": "text",
+      "id": "slide1_title",
+      "label": "Slide #1 Title",
+      "default": "Enjoy Your Shopping"
+    },
+    {
+      "type": "text",
+      "id": "slide1_url",
+      "label": "Slide #1 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "slide1_url_text",
+      "label": "Slide #1 URL Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_slide2",
+      "label": "Display Slide #2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "slide2_img",
+      "label": "Slide #2 Image"
+    },
+    {
+      "type": "text",
+      "id": "slide2_subtitle",
+      "label": "Slide #2 Subtitle",
+      "default": "Up to 50%"
+    },
+    {
+      "type": "text",
+      "id": "slide2_title",
+      "label": "Slide #2 Title",
+      "default": "Explore New Collection"
+    },
+    {
+      "type": "text",
+      "id": "slide2_url",
+      "label": "Slide #2 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "slide2_url_text",
+      "label": "Slide #2 URL Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_slide3",
+      "label": "Display Slide #3",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "slide3_img",
+      "label": "Slide #3 Image"
+    },
+    {
+      "type": "text",
+      "id": "slide3_subtitle",
+      "label": "Slide #3 Subtitle",
+      "default": "Up to 50%"
+    },
+    {
+      "type": "text",
+      "id": "slide3_title",
+      "label": "Slide #3 Title",
+      "default": "Slide #3 Title"
+    },
+    {
+      "type": "text",
+      "id": "slide3_url",
+      "label": "Slide #3 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "slide3_url_text",
+      "label": "Slide #3 URL Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_slide4",
+      "label": "Display Slide #4",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "slide4_img",
+      "label": "Slide #4 Image"
+    },
+    {
+      "type": "text",
+      "id": "slide4_subtitle",
+      "label": "Slide #4 Subtitle",
+      "default": "Up to 50%"
+    },
+    {
+      "type": "text",
+      "id": "slide4_title",
+      "label": "Slide #4 Title",
+      "default": "Slide #4 Title"
+    },
+    {
+      "type": "text",
+      "id": "slide4_url",
+      "label": "Slide #4 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "slide4_url_text",
+      "label": "Slide #4 URL Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_slide5",
+      "label": "Display Slide #5",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "slide5_img",
+      "label": "Slide #5 Image"
+    },
+    {
+      "type": "text",
+      "id": "slide5_subtitle",
+      "label": "Slide #5 Subtitle",
+      "default": "Up to 50%"
+    },
+    {
+      "type": "text",
+      "id": "slide5_title",
+      "label": "Slide #5 Title",
+      "default": "Slide #5 Title"
+    },
+    {
+      "type": "text",
+      "id": "slide5_url",
+      "label": "Slide #5 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "slide5_url_text",
+      "label": "Slide #5 URL Text",
+      "default": "Shop Now"
+    }
+
+
+
+
+
+  ]
+}
+{% endschema %}

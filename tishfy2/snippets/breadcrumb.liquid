@@ -1,0 +1,47 @@
+<!-- breadcrumb-area start -->
+<ul class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item">
+		<a href="/">Home</a>
+	</li>
+	{% if template contains 'product' %}
+	    {% if collection %}
+	      	{% if collection.handle %}
+	        	{% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+	        	<li class="breadcrumb-item">{{ collection.title | link_to: url }}</li>
+	      	{% endif %}
+	    {% endif %}
+	    <li class="breadcrumb-item active">{{ product.title }}</li>
+  	{% elsif template contains 'collection' and collection.handle %}
+	    {% if current_tags %}
+	      	{% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+	      	<li class="breadcrumb-item">{{ collection.title | link_to: url }}</li>
+	      	<li  class="breadcrumb-item active">{{ current_tags | join: " + " }}</li>
+	    {% else %}
+	      	<li  class="breadcrumb-item active">{{ collection.title }}</li>
+	    {% endif %}
+
+  	{% elsif template == 'blog' %}
+	    {% if current_tags %}
+	      	<li class="breadcrumb-item">{{ blog.title | link_to: blog.url }}</li>
+	      	<li class="breadcrumb-item active">{{ current_tags | join: " + " }}</li>
+	    {% else %}
+	    	<li  class="breadcrumb-item active">{{ blog.title }}</li>
+	    {% endif %}
+
+  	{% elsif template == 'article' %}
+	    <li>{{ blog.title | link_to: blog.url }}</li>
+	    
+	    <li class="breadcrumb-item active">{{ article.title }}</li>
+
+	{% elsif template contains 'page' %}
+
+		<li class="breadcrumb-item">{{ page.title }}</li>
+
+	{% elsif template contains 'search' %}
+		<li class="breadcrumb-item">Search</li>
+  	{% else %}
+	   	
+	   	<li class="breadcrumb-item">{{ page_title }}</li>
+
+	{% endif %}
+</ul>

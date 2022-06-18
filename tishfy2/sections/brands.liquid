@@ -1,0 +1,79 @@
+{%- if section.settings.display_brands -%}
+  {% if section.blocks.size > 0 %}
+      <!-- Brand Start -->
+      <div class="section section-padding mb-3">
+          <div class="container">
+              <div class="brand-active swiper-container">
+                  <div class="swiper-wrapper">
+                      {% for block in section.blocks %}
+                        <div class="swiper-slide single-brand">
+                            <img src="{{ block.settings.brandlogo | img_url }}" alt="">
+                        </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Brand End -->
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+      <!-- Brand Start -->
+      <div class="section section-padding mb-3">
+          <div class="container">
+              <div class="brand-active swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-01.png' | asset_url }}" alt="">
+                      </div>
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-02.png' | asset_url }}" alt="">
+                      </div>
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-03.png' | asset_url }}" alt="">
+                      </div>
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-04.png' | asset_url }}" alt="">
+                      </div>
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-05.png' | asset_url }}" alt="">
+                      </div>
+                      <div class="swiper-slide single-brand">
+                          <img src="{{ 'brand-03.png' | asset_url }}" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Brand End -->
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Brands",
+  "class": "index-section1",
+  "max_blocks": 30,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_brands",
+      "label": "Display Brands",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "brandlogo",
+          "label": "Brand Logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

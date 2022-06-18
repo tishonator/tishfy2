@@ -1,0 +1,584 @@
+<footer class="critical-hidden section footer-section site-footer" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
+  <div class="footer-widget-section page-width">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-5 order-md-1 order-lg-1">
+              <!-- Footer Widget Start -->
+              <div class="footer-widget">
+                  <div class="widget-text">
+                    {% if section.settings.footer_col1_ttl != blank %}
+                          <h4 class="footer-widget-title">{{section.settings.footer_col1_ttl}}</h4>
+                    {% endif %}
+                    {% if section.settings.footer_col1_cnt != blank %}
+                          {{section.settings.footer_col1_cnt}}
+                    {% endif %}
+                  </div>
+                  <div class="widget-social">
+                      <div class="social">
+                        {% if section.settings.footer_col1_facebook != blank %}
+                          <a href="{{section.settings.footer_col1_facebook}}"><i class="fa fa-facebook-f"></i></a>
+                        {% endif %}
+                        {% if section.settings.footer_col1_twitter != blank %}
+                          <a href="{{section.settings.footer_col1_twitter}}"><i class="fa fa-twitter"></i></a>
+                        {% endif %}
+                        {% if section.settings.footer_col1_instagram != blank %}
+                          <a href="{{section.settings.footer_col1_instagram}}"><i class="fa fa-instagram"></i></a>
+                        {% endif %}
+                        {% if section.settings.footer_col1_pinterest != blank %}
+                          <a href="{{section.settings.footer_col1_pinterest}}"><i class="fa fa-pinterest"></i></a>
+                        {% endif %}
+                      </div>
+                  </div>
+              </div>
+              <!-- Footer Widget End -->
+          </div>
+          <div class="col-lg-6 order-md-3 order-lg-2">
+              <div class="widget-link-wrapper">
+                  <!-- Footer Widget Start -->
+                  <div class="footer-widget">
+                      {% if section.settings.footer_col2_ttl != blank %}
+                          <h4 class="footer-widget-title">{{section.settings.footer_col2_ttl}}</h4>
+                      {% endif %}
+                      {% if section.settings.footer_col2_cnt != blank %}
+                            {{section.settings.footer_col2_cnt}}
+                      {% endif %}
+                  </div>
+                  <!-- Footer Widget End -->
+                  <!-- Footer Widget Start -->
+                  <div class="footer-widget">
+                      {% if section.settings.footer_col3_ttl != blank %}
+                          <h4 class="footer-widget-title">{{section.settings.footer_col3_ttl}}</h4>
+                      {% endif %}
+                      {% if section.settings.footer_col3_cnt != blank %}
+                            {{section.settings.footer_col3_cnt}}
+                      {% endif %}
+                  </div>
+                  <!-- Footer Widget End -->
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-7 order-md-2 order-lg-3">
+            <div class="footer-widget">
+              {% if section.settings.footer_col4_ttl != blank %}
+                  <h4 class="footer-widget-title">{{section.settings.footer_col4_ttl}}</h4>
+              {% endif %}
+              {% if section.settings.footer_col4_cnt != blank %}
+                    {{section.settings.footer_col4_cnt}}
+              {% endif %}
+              <!-- Footer Widget End -->
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Copyright Start -->
+  <div class="footer-copyright">
+      <div class="container">
+          <div class="copyright-payment">
+              <div class="copyright-text">
+                  <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by">{{ powered_by_link }}</small>
+              </div>
+              <div class="payment-method">
+                {%- if section.settings.footer_payment_img != blank -%}
+                      <img src="{{ section.settings.footer_payment_img | img_url }}" alt="">
+                {%- else -%}
+                      <img src="{{ 'payment.webp' | asset_url }}" alt="">
+                {%- endif -%}
+              </div>
+          </div>
+      </div>
+
+      {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
+  <!-- Footer Copyright End -->
+
+    <div class="footer-shape">
+      {%- if section.settings.footer_backgr_img != blank -%}
+        <img src="{{ section.settings.footer_backgr_img | img_url }}" alt="">
+      {%- else -%}
+        <img src="{{ 'footer-shape.png' | asset_url }}" alt="">
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+
+
+
+{% schema %}
+{
+  "name": {
+    "cs": "Zápatí",
+    "da": "Sidefod",
+    "de": "Fußzeile",
+    "en": "Footer",
+    "es": "Pie de página",
+    "fi": "Alatunniste",
+    "fr": "Pied de page",
+    "it": "Footer",
+    "ja": "フッター",
+    "ko": "바닥글",
+    "nb": "Footer",
+    "nl": "Voettekst",
+    "pl": "Stopka",
+    "pt-BR": "Rodapé",
+    "pt-PT": "Rodapé",
+    "sv": "Sidfot",
+    "th": "ส่วนท้าย",
+    "tr": "Altbilgi",
+    "vi": "Chân trang",
+    "zh-CN": "页脚",
+    "zh-TW": "頁尾"
+  },
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "header",
+      "content": {
+        "cs": "Platební metody",
+        "da": "Betalingsmetoder",
+        "de": "Zahlungsmethoden",
+        "en": "Payment methods",
+        "es": "Métodos de pago",
+        "fi": "Maksutavat",
+        "fr": "Moyens de paiement",
+        "it": "Metodi di pagamento",
+        "ja": "決済方法",
+        "ko": "결제 방법",
+        "nb": "Betalingsmetoder",
+        "nl": "Betaalmethoden",
+        "pl": "Metody płatności",
+        "pt-BR": "Formas de pagamento",
+        "pt-PT": "Métodos de Pagamento",
+        "sv": "Betalningsmetoder",
+        "th": "วิธีการชำระเงิน",
+        "tr": "Ödeme yöntemleri",
+        "vi": "Phương thức thanh toán",
+        "zh-CN": "支付方式",
+        "zh-TW": "付款方式"
+      }
+    },
+    {
+      "type": "text",
+      "id": "footer_col1_ttl",
+      "label": "Footer Column #1 Title",
+      "default": "About us"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_col1_cnt",
+      "label": "Footer Column #1 Content",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "text",
+      "id": "footer_col1_facebook",
+      "label": "Facebook URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "footer_col1_twitter",
+      "label": "Twitter URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "footer_col1_instagram",
+      "label": "Instagram URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "footer_col1_pinterest",
+      "label": "Pinterest URL",
+      "default": "#"
+    },
+
+    {
+      "type": "text",
+      "id": "footer_col2_ttl",
+      "label": "Footer Column #2 Title",
+      "default": "Our Stores"
+    },
+
+    {
+      "type": "textarea",
+      "id": "footer_col2_cnt",
+      "label": "Footer Column #2 Content",
+      "default": "<div class=\"footer-widget-link\"><ul><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i> New York </a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i> Chicago </a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i> Las Vegas </a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i> Washington </a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i> Boston </a></li></ul></div>"
+    },
+    {
+      "type": "text",
+      "id": "footer_col3_ttl",
+      "label": "Footer Column #3 Title",
+      "default": "Links"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_col3_cnt",
+      "label": "Footer Column #3 Content",
+      "default": "<div class=\"footer-widget-link\"><ul><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i>About us</a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i>Conditions</a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i>Payment</a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i>Return Policy</a></li><li><a href=\"#\"><i class=\"fa fa-angle-double-right\"></i>My Account</a></li></ul></div>"
+    },
+    {
+      "type": "text",
+      "id": "footer_col4_ttl",
+      "label": "Footer Column #4 Title",
+      "default": "Contacts"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_col4_cnt",
+      "label": "Footer Column #4 Content",
+      "default": "<div class=\"widget-info-wrapper\"><div class=\"single-info\"><p>12 North Thompson Street Richmond, VA 23221</p></div><div class=\"single-info\"><p>Phone no. <a href=\"tel:+8043591337\">(804) 359-1337</a></p><p>Mobile. <a href=\"tel:+8043591338\">(804) 359-1338</a></p></div><div class=\"single-info\"><p><a href=\"mailto:office@example.com\">office@example.com</a></p></div></div>"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_backgr_img",
+      "label": "Footer Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_payment_img",
+      "label": "Footer Payment Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Menu",
+        "es": "Menú",
+        "fi": "Valikko",
+        "fr": "Menu",
+        "it": "Menu",
+        "ja": "メニュー",
+        "ko": "메뉴",
+        "nb": "Meny",
+        "nl": "Menu",
+        "pl": "Menu",
+        "pt-BR": "Menu",
+        "pt-PT": "Menu",
+        "sv": "Meny",
+        "th": "เมนู",
+        "tr": "Menü",
+        "vi": "Menu",
+        "zh-CN": "菜单",
+        "zh-TW": "選單"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "cs": "Nadpis",
+            "da": "Overskrift",
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fi": "Otsake",
+            "fr": "Titre",
+            "it": "Titolo",
+            "ja": "見出し",
+            "ko": "제목",
+            "nb": "Overskrift",
+            "nl": "Kop",
+            "pl": "Nagłówek",
+            "pt-BR": "Título",
+            "pt-PT": "Título",
+            "sv": "Rubrik",
+            "th": "ส่วนหัว",
+            "tr": "Başlık",
+            "vi": "Tiêu đề",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "cs": "Rychlé odkazy",
+            "da": "Genvejslinks",
+            "de": "Quick-Links",
+            "en": "Quick links",
+            "es": "Enlaces rápidos",
+            "fi": "Pikalinkit",
+            "fr": "Liens rapides",
+            "it": "Link rapidi",
+            "ja": "クイックリンク",
+            "ko": "빠른 링크",
+            "nb": "Hurtigkoblinger",
+            "nl": "Snelle links",
+            "pl": "Szybkie linki",
+            "pt-BR": "Links rápidos",
+            "pt-PT": "Ligações rápidas",
+            "sv": "Snabblänkar",
+            "th": "ลิงก์ด่วน",
+            "tr": "Hızlı bağlantılar",
+            "vi": "Liên kết nhanh",
+            "zh-CN": "快速链接",
+            "zh-TW": "快速連結"
+          }
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": {
+            "cs": "Nabídka",
+            "da": "Menu",
+            "de": "Menü",
+            "en": "Menu",
+            "es": "Menú",
+            "fi": "Valikko",
+            "fr": "Menu",
+            "it": "Menu",
+            "ja": "メニュー",
+            "ko": "메뉴",
+            "nb": "Meny",
+            "nl": "Menu",
+            "pl": "Menu",
+            "pt-BR": "Menu",
+            "pt-PT": "Menu",
+            "sv": "Meny",
+            "th": "เมนู",
+            "tr": "Menü",
+            "vi": "Menu",
+            "zh-CN": "菜单",
+            "zh-TW": "選單"
+          },
+          "default": "footer"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fi": "Teksti",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "ko": "텍스트",
+        "nb": "Tekst",
+        "nl": "Tekst",
+        "pl": "Tekst",
+        "pt-BR": "Texto",
+        "pt-PT": "Texto",
+        "sv": "Text",
+        "th": "ข้อความ",
+        "tr": "Metin",
+        "vi": "Văn bản",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "cs": "Nadpis",
+            "da": "Overskrift",
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fi": "Otsake",
+            "fr": "Titre",
+            "it": "Titolo",
+            "ja": "見出し",
+            "ko": "제목",
+            "nb": "Overskrift",
+            "nl": "Kop",
+            "pl": "Nagłówek",
+            "pt-BR": "Título",
+            "pt-PT": "Título",
+            "sv": "Rubrik",
+            "th": "ส่วนหัว",
+            "tr": "Başlık",
+            "vi": "Tiêu đề",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "cs": "Informujte o svém obchodu",
+            "da": "Fortæl om din virksomhed",
+            "de": "Rede über dein Unternehmen",
+            "en": "Talk about your business",
+            "es": "Habla sobre tu negocio",
+            "fi": "Kerro yrityksestäsi",
+            "fr": "Parlez de votre entreprise",
+            "it": "Parla della tua attività commerciale",
+            "ja": "あなたのビジネスについて語る",
+            "ko": "비즈니스에 대한 이야기하기",
+            "nb": "Snakk om bedriften din",
+            "nl": "Vertel over je bedrijf",
+            "pl": "Opowiedz o swojej firmie",
+            "pt-BR": "Fale sobre o seu negócio",
+            "pt-PT": "Fale sobre o seu negócio",
+            "sv": "Prata om ditt företag",
+            "th": "พูดถึงธุรกิจของคุณ",
+            "tr": "İşletmenizden bahsedin",
+            "vi": "Chia sẻ về doanh nghiệp của bạn",
+            "zh-CN": "介绍您的业务",
+            "zh-TW": "描述您的商家"
+          }
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": {
+            "cs": "Text",
+            "da": "Tekst",
+            "de": "Text",
+            "en": "Text",
+            "es": "Texto",
+            "fi": "Teksti",
+            "fr": "Texte",
+            "it": "Testo",
+            "ja": "テキスト",
+            "ko": "텍스트",
+            "nb": "Tekst",
+            "nl": "Tekst",
+            "pl": "Tekst",
+            "pt-BR": "Texto",
+            "pt-PT": "Texto",
+            "sv": "Text",
+            "th": "ข้อความ",
+            "tr": "Metin",
+            "vi": "Văn bản",
+            "zh-CN": "文本",
+            "zh-TW": "文字"
+          },
+          "default": {
+            "cs": "<p>Popište zákazníkům podrobně svůj obchod, propagační akce nebo značky nabízeného zboží.</p>",
+            "da": "<p>Del butiksoplysninger, reklamer eller brandindhold med dine kunder.</p>",
+            "de": "<p>Teile deine Shop-Details, Werbeaktionen oder Markeninhalte mit deinen Kunden.</p>",
+            "en": "<p>Share store details, promotions, or brand content with your customers.</p>",
+            "es": "<p>Comparte detalles de la tienda, promociones o contenido de la marca con tus clientes.</p>",
+            "fi": "<p>Jaa myymälän tiedot, tarjoukset tai brändin sisältö asiakkaittesi kanssa.</p>",
+            "fr": "<p>Partagez les détails de la boutique, les promotions ou le contenu de la marque avec vos clients.</p>",
+            "it": "<p>Condividi dettagli del negozio, promozioni o contenuti del brand con i clienti.</p>",
+            "ja": "<p>ストア詳細、プロモーション、ブランドのコンテンツをお客様と共有する。</p>",
+            "ko": "<p>스토어 세부 정보, 프로모션 또는 브랜드 콘텐츠를 고객과 공유하십시오.</p>",
+            "nb": "<p>Del butikkdetaljer, kampanjer eller merkevareinnhold med kundene dine.</p>",
+            "nl": "<p>Deel winkeldetails, promoties of merkcontent met je klanten.</p>",
+            "pl": "<p>Poinformuj swoich klientów o sklepie, promocjach lub zawartości marki.</p>",
+            "pt-BR": "<p>Compartilhe informações da loja, promoções ou conteúdo da marca com seus clientes.</p>",
+            "pt-PT": "<p>Partilhe detalhes da loja, promoções ou conteúdo de marca com os seus clientes.</p>",
+            "sv": "<p>Dela butikens detaljer, kampanjer eller varumärkesinnehåll med dina kunder.</p>",
+            "th": "<p>แชร์รายละเอียดร้านค้า โปรโมชัน หรือเนื้อหาแบรนด์กับลูกค้าของคุณ</p>",
+            "tr": "<p>Mağaza ayrıntılarını, promosyonları, marka içeriğini müşterilerinizle paylaşın.</p>",
+            "vi": "<p>Chia sẻ thông tin cửa hàng, khuyến mãi hoặc nội dung thương hiệu với khách hàng.</p>",
+            "zh-CN": "<p>与您的客户共享商店详细信息、促销信息或品牌内容。</p>",
+            "zh-TW": "<p>與顧客分享商店的詳細資訊、宣傳活動或品牌內容。</p>"
+          }
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "limit": 1,
+      "name": {
+        "cs": "Přihlášení k odběru novinek",
+        "da": "Tilmelding til nyhedsbrev",
+        "de": "Newsletter-Anmeldung",
+        "en": "Newsletter signup",
+        "es": "Suscripción al boletín",
+        "fi": "Uutiskirjeen tilaus",
+        "fr": "Inscription",
+        "it": "Iscriviti alla Newsletter",
+        "ja": "ニュースレターの登録",
+        "ko": "뉴스레터 신청",
+        "nb": "Registrering for nyhetsbrev",
+        "nl": "Nieuwsbriefaanmelding",
+        "pl": "Rejestracja do newslettera",
+        "pt-BR": "Assinatura da newsletter",
+        "pt-PT": "Registo na newsletter",
+        "sv": "Nyhetsbrevsregistrering",
+        "th": "การสมัครรับจดหมายข่าว",
+        "tr": "Bülten aboneliği",
+        "vi": "Đăng ký nhận bản tin",
+        "zh-CN": "新闻通讯注册",
+        "zh-TW": "訂閱電子報"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "cs": "Nadpis",
+            "da": "Overskrift",
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fi": "Otsake",
+            "fr": "Titre",
+            "it": "Titolo",
+            "ja": "見出し",
+            "ko": "제목",
+            "nb": "Overskrift",
+            "nl": "Kop",
+            "pl": "Nagłówek",
+            "pt-BR": "Título",
+            "pt-PT": "Título",
+            "sv": "Rubrik",
+            "th": "ส่วนหัว",
+            "tr": "Başlık",
+            "vi": "Tiêu đề",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "info": {
+            "cs": "Odběratelé budou přidáni do vašeho [seznamu zákazníků, kteří přijímají marketing.](/admin/customers?query=&accepts_marketing=1)",
+            "da": "Abonnenter bliver føjet til [kundelisten](/admin/customers?query=&accepts_marketing=1) for \"accepterer markedsføring\".",
+            "de": "Abonnenten werden zu deiner Liste „akzeptiert Marketingmaterial“ hinzugefügt [Kundenliste.](/admin/customers?query=&accepts_marketing=1)",
+            "en": "Subscribers will be added to your “accepts marketing” [customer list.](/admin/customers?query=&accepts_marketing=1)",
+            "es": "Los suscriptores se añadirán a tu [lista de clientes.](/admin/customers?query=&accepts_marketing=1) \"Acepta marketing\".",
+            "fi": "Tilaajat lisätään \"hyväksyy markkinointi\" [-asiakasluetteloosi. ](/admin/customers?query=&accepts_marketing=1)",
+            "fr": "Les abonnés seront ajoutés à votre [liste de clients](/admin/customers?query=&accepts_marketing=1) « Accepte le marketing ».",
+            "it": "Gli iscritti verranno aggiunti al tuo [elenco clienti.](/admin/customers?query=&accepts_marketing=1) «accetta marketing»",
+            "ja": "購読者は「マーケティングを受け入れる」[顧客リスト](/admin/customers?query=&accepts_marketing=1) に追加されます。",
+            "ko": "가입자가 \"마케팅 수락\" [고객 목록.](/admin/customers?query=&accepts_marketing=1)에 추가됩니다.",
+            "nb": "Abonnenter vil bli lagt til i «aksepterer markedsføring» [kundeliste.](/admin/customers?query=&accepts_marketing=1)",
+            "nl": "Abonnees worden toegevoegd aan je \"accepteert marketing\" [klantenlijst.](/admin/customers?query=&accepts_marketing=1)",
+            "pl": "Subskrybenci zostaną dodani do Twojej [listy klientów \"akceptujących marketing\".](/admin/customers?query=&accepts_marketing=1)",
+            "pt-BR": "Os assinantes serão adicionados à “aceita marketing” [lista de clientes. ](/admin/customers?query=&accepts_marketing=1)",
+            "pt-PT": "Os subscritores serão adicionados à sua lista de \"aceitam marketing\" [lista de clientes.](/admin/customers?query=&accepts_marketing=1)",
+            "sv": "Prenumeranter läggs till i din \"accepterar marknadsföring\" [kundlista. ](/admin/customers?query=&accepts_marketing=1)",
+            "th": "ระบบจะเพิ่มผู้สมัครใช้งานไปยังส่วน “ยอมรับการตลาด” ของคุณ [รายชื่อลูกค้า](/admin/customers?query=&accepts_marketing=1)",
+            "tr": "Aboneler \"pazarlama kabul ediyor\" [müşteri listenize](/admin/customers?query=&accepts_marketing=1) eklenir.",
+            "vi": "Người đăng ký sẽ được thêm vào [danh sách khách hàng](/admin/customers?query=&accepts_marketing=1) \"chấp nhận tiếp thị\".",
+            "zh-CN": "订阅者将被添加到您的“接受营销”[客户列表](/admin/customers?query=&accepts_marketing=1)中。",
+            "zh-TW": "系統會將訂閱者新增至您的「接受行銷」[客戶清單。](/admin/customers?query=&accepts_marketing=1)"
+          },
+          "default": {
+            "cs": "Novinky",
+            "da": "Nyhedsbrev",
+            "de": "Newsletter",
+            "en": "Newsletter",
+            "es": "Boletín",
+            "fi": "Uutiskirje",
+            "fr": "Newsletter",
+            "it": "Newsletter",
+            "ja": "ニュースレター",
+            "ko": "뉴스레터",
+            "nb": "Nyhetsbrev",
+            "nl": "Nieuwsbrief",
+            "pl": "Newsletter",
+            "pt-BR": "Newsletter",
+            "pt-PT": "Newsletter",
+            "sv": "Nyhetsbrev",
+            "th": "จดหมายข่าว",
+            "tr": "Bülten",
+            "vi": "Bản tin",
+            "zh-CN": "新闻通讯",
+            "zh-TW": "電子報"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
